@@ -1,0 +1,36 @@
+package dev.mouse;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/hello")
+public class HelloServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 응답 콘텐츠 유형 설정
+        resp.setContentType("text/html");
+        resp.setCharacterEncoding("UTF-8");
+        
+        // 클라이언트에 응답 출력
+        PrintWriter out = resp.getWriter();
+        out.println("<html>");
+        out.println("<head><title>Hello Servlet</title></head>");
+        out.println("<body>");
+        out.println("<h1>Hello, World!</h1>");
+        out.println("<p>This is a simple servlet response.</p>");
+        out.println("</body>");
+        out.println("</html>");
+        
+        // 출력 스트림 닫기
+        out.close();
+        
+        // 서버 콘솔에 메시지 출력
+        System.out.println("Hello");
+    }
+}

@@ -1,0 +1,5 @@
+package dev.mouse.db;
+
+public class DBconfigurer {
+
+}

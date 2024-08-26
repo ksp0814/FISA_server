@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>step02_servlet_syntax</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- XML 기반으로 사용자 요청에 따라 동작할 서블릿 파일을 맵핑 -->
+  <!-- <servlet> - 서블릿 객체를 맵핑하기 위한 태그 -->
+  <servlet>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<!-- FirstServlet.java가 동작하도록 지정 -->
+  	<servlet-class>dev.syntax.step03httprequest.FirstHttpRequestServlet</servlet-class>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<!-- localhost:8080/프로젝트명(step02_servlet_syntax)/servlets/firstservlet으로 요청 시 동작 -->
+  	<url-pattern>/servlets/Secondservlet</url-pattern>
+  </servlet-mapping>  
+  
+</web-app>
+
+
+

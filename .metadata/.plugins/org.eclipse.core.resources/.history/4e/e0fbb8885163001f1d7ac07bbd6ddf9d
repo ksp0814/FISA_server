@@ -1,0 +1,36 @@
+package dev.mouse.data;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import dev.mouse.db.DBUtil;
+import dev.mouse.model.Mouse;
+
+public class mouseDAO {
+
+	public static List<Mouse> findAll() throws SQLException {
+		// TODO Auto-generated method stub
+		final String query = "select * from mouse";
+		
+		List<Mouse> mouseList = new ArrayList<>();
+		try (Connection connection = DBUtil.getConnection("src/resource/jdbc.properties");
+			 PreparedStatement pstmt = connection.prepareStatement(query)) {
+
+			try (ResultSet resultSet = pstmt.executeQuery()) {
+				while (resultSet.next()) {
+					int id = resultSet.getInt("id");
+					String name = resultSet.getString("name");
+					String country = resultSet.getString("country");
+					String address = resultSet.getString("address");
+					mouseList.add(new Mouse(id, name, country, address));
+				}
+			}
+		}
+		return mouseList;
+	}
+}
+

@@ -1,0 +1,5 @@
+package dev.mouse.model;
+
+public class Mouse {
+
+}

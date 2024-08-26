@@ -1,0 +1,5 @@
+package dev.mouse;
+
+public class MouseListServlet {
+
+}
