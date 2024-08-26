@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<div>
+			<a href="register">회원가입</a>
+		</div>
+		<div >
+			<a href="login-practice">로그인</a>
+		</div>
+		<div >
+			<a href="logout-pratice">로그아웃</a>
+		</div>
+	</form>
+</body>
+</html>

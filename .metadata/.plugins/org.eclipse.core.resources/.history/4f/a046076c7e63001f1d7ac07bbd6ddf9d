@@ -1,0 +1,32 @@
+package dev.syntax.step05statemanaging.step03practice.data;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import dev.syntax.step05statemanaging.step03practice.db.DBUtil;
+import dev.syntax.step05statemanaging.step03practice.model.member;
+
+
+public class loginDAO {
+	public int add(member member) {
+		int result = 0;
+		String query = "INSERT INTO mouse (user_id, password) VALUES(?, ?)";
+		try (Connection con = DBUtil.getConnection(); 
+			 PreparedStatement pstmt = con.prepareStatement(query)) {
+
+			pstmt.setString(1, member.getUser_id());
+			pstmt.setString(2, member.getPassword());
+			
+
+			// DB Query 수행
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		}
+
+		return result;
+	}
+}

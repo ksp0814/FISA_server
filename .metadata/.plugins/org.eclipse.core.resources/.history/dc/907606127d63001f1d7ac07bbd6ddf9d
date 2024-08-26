@@ -1,0 +1,52 @@
+package dev.syntax.step05statemanaging.step03practice;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dev.syntax.step05statemanaging.step03practice.data.*;
+import dev.syntax.step05statemanaging.step03practice.model.member;
+
+@WebServlet("/register")
+public class PracticeRegisterServlet extends HttpServlet{
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		StringBuilder responseHTML = new StringBuilder();
+		
+		responseHTML.append("<html>");
+		responseHTML.append("	<head>");
+		responseHTML.append("		<meta charset=\"UTF-8\"/>");
+		responseHTML.append("		<title>회원가입 페이지</title>");
+		responseHTML.append("	</head>");
+		responseHTML.append("		<body>");
+		
+		final String URL = "\"add\"";
+		final String HTTP_METHOD = "\"POST\""; 
+		
+		String formAttribute = String.format("action=%s method=%s", URL, HTTP_METHOD);
+		responseHTML.append("<h1>회원가입 페이지</h1>");
+		responseHTML.append("			<form " + formAttribute + ">");
+		
+		String user_idInputAttribute = "type=\"text\" name=\"user_id\"";
+		responseHTML.append("			user_id: <input " + user_idInputAttribute + "><br/>");
+		
+		String passwordInputAttribute = "type=\"text\" name=\"password\"";
+		responseHTML.append("			password: <input " + passwordInputAttribute + "><br/>");
+		
+		resp.setCharacterEncoding("UTF-8");
+		resp.setContentType("text/html");
+	
+		PrintWriter writer = resp.getWriter();
+		writer.write(responseHTML.toString());
+	}
+	
+	
+
+}
