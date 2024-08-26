@@ -238,3 +238,13 @@
 127.0.0.1 - - [26/Aug/2024:15:05:27 +0900] "GET / HTTP/1.1" 404 807
 0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:05:27 +0900] "GET /step02_servlet_syntax/WEB-INF/classes/dev/syntax/step05statemanaging/step01cookie/ReadCookieServlet.java HTTP/1.1" 404 721
 0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:05:33 +0900] "GET /step02_servlet_syntax/read-cookie HTTP/1.1" 200 77
+127.0.0.1 - - [26/Aug/2024:15:11:48 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:11:48 +0900] "GET /step02_servlet_syntax/WEB-INF/classes/dev/syntax/step05statemanaging/step02session/LogoutServlet.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:11:54 +0900] "GET /step02_servlet_syntax/logout HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:12:00 +0900] "GET /step02_servlet_syntax/login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:12:03 +0900] "POST /step02_servlet_syntax/login HTTP/1.1" 200 16
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:12:11 +0900] "GET /step02_servlet_syntax/logout HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:12:53 +0900] "GET /step02_servlet_syntax/index.html HTTP/1.1" 200 324
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:12:55 +0900] "GET /step02_servlet_syntax/register.html HTTP/1.1" 404 846
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:12:57 +0900] "GET /step02_servlet_syntax/logout HTTP/1.1" 200 33
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:15:13:00 +0900] "GET /step02_servlet_syntax/logout HTTP/1.1" 200 33
