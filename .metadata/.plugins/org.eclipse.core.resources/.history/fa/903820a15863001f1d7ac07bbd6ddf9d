@@ -47,25 +47,4 @@ public class mouseDAO {
 		return mouseList;
 	}
 	
-	public int add(Mouse mouse) {
-		int result = 0;
-		String query = "INSERT INTO mouse (name, country, address) VALUES(?, ?, ?)";
-		try (Connection con = DBUtil.getConnection(); 
-			 PreparedStatement pstmt = con.prepareStatement(query)) {
-
-			pstmt.setString(1, mouse.getName());
-			pstmt.setString(2, mouse.getCountry());
-			pstmt.setString(3, mouse.getAddress());
-
-			// DB Query 수행
-			result = pstmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e1) {
-			e1.printStackTrace();
-		}
-
-		return result;
-	}
-	
 }

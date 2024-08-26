@@ -19,6 +19,7 @@ public class HelloServlet extends HttpServlet {
         dispatcher.forward(req, resp);
     	
         
+        resp.sendRedirect(req.getContextPath() + "/hello");
     	//PrintWriter out = resp.getWriter();
     	//out.print("hello");
     }

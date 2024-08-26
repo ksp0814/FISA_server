@@ -18,7 +18,6 @@ public class HelloServlet extends HttpServlet {
     	RequestDispatcher dispatcher = req.getRequestDispatcher("/index.html");
         dispatcher.forward(req, resp);
     	
-        
     	//PrintWriter out = resp.getWriter();
     	//out.print("hello");
     }

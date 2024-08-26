@@ -1,0 +1,5 @@
+package dev.mouse.controller;
+
+public class MouseInsertServlet {
+
+}
