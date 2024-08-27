@@ -6,8 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import dev.syntax.step05statemanaging.step03practice.db.DBUtil;
-import dev.syntax.step05statemanaging.step03practice.model.member;
-
+import dev.syntax.step05statemanaging.step03practice.model.*;
 public class loginDAO {
 
     // 기존 회원가입 메서드

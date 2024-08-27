@@ -15,14 +15,36 @@
   <servlet>
   	<servlet-name>MyFirstServlet</servlet-name>
   	<!-- FirstServlet.java가 동작하도록 지정 -->
-  	<servlet-class>dev.syntax.step02servletprocess.ProcessServlet</servlet-class>
-  	
+  	<servlet-class>dev.syntax.step01helloservlet.FirstServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>MyFirstServlet</servlet-name>
   	<!-- localhost:8080/프로젝트명(step02_servlet_syntax)/servlets/firstservlet으로 요청 시 동작 -->
-  	<url-pattern>/servlets/Secondservlet</url-pattern>
-  </servlet-mapping>  
+  	<url-pattern>/servlets/firstservlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>MySecondServlet</servlet-name>
+  	<!-- FirstServlet.java가 동작하도록 지정 -->
+  	<servlet-class>dev.syntax.step01helloservlet.SecondServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MySecondServlet</servlet-name>
+  	<!-- localhost:8080/프로젝트명(step02_servlet_syntax)/servlets/firstservlet으로 요청 시 동작 -->
+  	<url-pattern>/servlets/secondservlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 2.Filter 맵핑 -->
+   <filter>
+   	<filter-name>EncodingFilter</filter-name>
+   	<filter-class>dev.syntax.step07filter.MyEncodingFilter</filter-class>
+   </filter>
+   
+   <filter-mapping>
+   	<filter-name>EncodingFilter</filter-name>
+   	<!-- lh:8080/이후 경로에 포함되는 모든 경로들에 대해 EncodingFilter를 적용 -->
+   	<url-pattern>/*</url-pattern>
+   </filter-mapping>
   
 </web-app>
 

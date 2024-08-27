@@ -21,7 +21,7 @@ public class PracticeLogoutServlet extends HttpServlet{
 		
 		HttpSession session = req.getSession(false);
 		
-		if (session != null && session.getAttribute("id") != null) {
+		if (session != null && session.getAttribute("user_id") != null) {
 			session.invalidate();
 			out.print("로그아웃 되었습니다.");
 		} else {
